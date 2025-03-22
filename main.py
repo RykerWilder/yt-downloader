@@ -28,5 +28,6 @@ def download():
     except Exception as e:
         return f"<h1>Errore durante il download: {e}</h1>"
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+
+if __name__ == "__main__":
+    app.run(debug=True)
