@@ -15,7 +15,6 @@ def download():
     # Ottieni l'URL dal modulo HTML
     link = request.form["url"]
 
-    # Opzioni per yt-dlp
     ydl_opts = {
         'format': 'bestvideo+bestaudio/best', 
         'merge_output_format': 'mp4', 
@@ -23,7 +22,6 @@ def download():
     }
 
     try:
-        # Scarica il video
         with YoutubeDL(ydl_opts) as ydl:
             ydl.download([link])
         return "<h1>Download completato!</h1>"
