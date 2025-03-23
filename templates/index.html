@@ -9,15 +9,17 @@
     <title>Youtube Downloader</title>
 </head>
 <body>
-    <main class="h-[100vh] flex flex-col items center justify-center gap-30 bg-slate-600">
-        <h1 class="text-center font-bold bg text-5xl">Welcome to You<span class="text-red-500">Tube</span> downloader!</h1>
-        <form method="POST" action="/download" class="flex justify-center items-center h-[50px]" id="download-form">
+    <main class="h-[100vh] flex flex-col items center justify-center bg-slate-600">
+        <h1 class="text-center font-bold bg text-5xl mb-30">Welcome to You<span class="text-red-500">Tube</span> downloader!</h1>
+        <form method="POST" action="/download" class="flex justify-center items-center h-[50px] mb-10" id="download-form">
             <label for="url" class="text-xl mr-2">Enter video URL</label>
             <input type="text" id="url" name="url" required class="p-4 border mr-2 rounded-2xl w-[500px] h-full focus:outline-none">
             <button type="submit" class="px-6 rounded-2xl cursor-pointer bg-red-500 h-full">Download</button>
         </form>
-        <p>Velocità: <span id="speed">0 B/s</span></p>
-        <p>Tempo rimanente: <span id="eta">0s</span></p>
+        <div class="flex gap-4 justify-center items-start">
+            <p class="font-bold text-l">Velocità: <span id="speed">0 B/s</span></p>
+            <p class="font-bold text-l">Tempo rimanente: <span id="eta">0s</span></p>
+        </div>
         <!-- Includi il file JavaScript esterno -->
         <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </main>

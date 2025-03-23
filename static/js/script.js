@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const response = await fetch("/status");
             const status = await response.json();
 
-            speedElement.textContent = `Velocità: ${status.speed}`;
-            etaElement.textContent = `Tempo rimanente: ${status.eta}`;
-        }, 1000);
+            speedElement.textContent = status.speed;
+            etaElement.textContent = status.eta;
+        }, 500);
     } else {
         console.error("Uno o più elementi del DOM non sono stati trovati.");
     }
