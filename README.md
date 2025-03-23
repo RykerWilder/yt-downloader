@@ -20,3 +20,40 @@ Before running the project, make sure you have installed:
 - **Flask**: A lightweight web framework for Python.
 - **yt-dlp**: A library to download videos from platforms such as YouTube.
 - **pip**: Python's package manager for installing dependencies.
+
+---
+
+## Download the project 
+
+1. **Clone the repository** 
+
+   Open the terminal and run:
+   ```bash 
+   git clone https://github.com/RykerWilder/yt-downloader.git
+   ```
+   ```bash
+   cd yt-downloader
+   ```
+2. **Create a virtual environment**
+   ```bash
+   python -m venv .venv
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install flask
+   ```
+   ```bash
+   pip install yt-dlp
+   ```
+
+4. **Run the app**
+   ```bash
+   python3 main.py
+   ```
+   or
+   ```bash
+    flask --app main run
+   ```
+
+The application will be available in your browser at 127.0.0.1:5000.
